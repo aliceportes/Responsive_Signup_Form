@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      function handleSubmit(event) {
+        event.preventDefault();
+        alert("Form submitted successfully! We'll be in touch.");
+        event.target.reset(); // clears the form
+      }
+      function handleSignIn() {
+        alert("Redirecting to login page... (feature coming soon)");
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-image">
+        <img src="signup.svg" alt="Signup Illustration" />
+      </div>
+      <div class="form">
+        <form onsubmit="handleSubmit(event)">
+          <div class="form-header">
+            <div class="title">
+              <h1>Sign Up</h1>
+            </div>
+            <div class="login-button">
+              <button type="button" onclick="handleSignIn()">
+                <a href="#">Sign In</a>
+              </button>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <div class="input-box">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="fname" placeholder="Type your first name" required />
+            </div>
+            <div class="input-box">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lname" placeholder="Type your last name" required />
+            </div>
+            <div class="input-box">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="Type your email" required />
+            </div>
+            <div class="input-box">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="(xx) xxxx-xxxx" required />
+            </div>
+            <div class="input-box">
+              <label for="pwd">Password</label>
+              <input type="password" id="pwd" name="pwd" placeholder="Type your password" required autocomplete="off" />
+            </div>
+            <div class="input-box">
+              <label for="confirmpwd">Confirm your Password</label>
+              <input type="password" id="confirmpwd" name="confirmpwd" placeholder="Confirm your password" required autocomplete="off" />
+            </div>
+          </div>
+          <div class="gender-inputs">
+            <div class="gender-title">
+              <h6>Gender</h6>
+            </div>
+            <div class="gender-group">
+              <div class="gender-input">
+                <input type="radio" id="female" name="gender" value="female" />
+                <label for="female">Female</label>
+              </div>
+              <div class="gender-input">
+                <input type="radio" id="male" name="gender" value="male" />
+                <label for="male">Male</label>
+              </div>
+              <div class="gender-input">
+                <input type="radio" id="others" name="gender" value="others" />
+                <label for="others">Others</label>
+              </div>
+              <div class="gender-input">
+                <input type="radio" id="none" name="gender" value="none" />
+                <label for="none">Rather not say</label>
+              </div>
+            </div>
+          </div>
+          <div class="continue-button">
+            <button type="submit">Continue</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
